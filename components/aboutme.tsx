@@ -4,13 +4,12 @@ import {
   SiExpress,
   SiReact,
   SiNodedotjs,
-  IconType,
 } from "react-icons/si";
 import Heads from "./heads";
 
 type TechStackIcon = {
   name: string;
-  icon: IconType;
+  icon: any;
   bg: string;
   color: string;
   spin?: boolean;
