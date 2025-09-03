@@ -55,7 +55,6 @@ export default function RootLayout({
           innerScale={1}
           outerScale={2.5}
           outerAlpha={0}
-          hasBlendMode={true}
           innerStyle={{ backgroundColor: "#fff" }}
           outerStyle={{ border: "3px solid #BEF264" }}
           clickables={[
