@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react";
-import { Form, Input, Button, Textarea, Tooltip } from "@heroui/react";
+import { Form, Input, Button, Textarea, Tooltip, addToast, Chip } from "@heroui/react";
 import Pic from '@assets/images/quddus.jpg';
 import {
   FaGithubAlt,
@@ -32,9 +32,29 @@ const Page: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setAction(`submit ${JSON.stringify(formData)}`);
+
+    try {
+      setAction("sending");
+
+      const res = await fetch("/api/v1/smtp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setAction("success");
+        setFormData({ name: "", email: "", description: "" });
+      } else {
+        setAction("error");
+      }
+    } catch {
+      setAction("error");
+    }
   };
 
   const handleReset = () => {
@@ -61,7 +81,7 @@ const Page: React.FC = () => {
     {
       name: "LinkedIn",
       icon: <FaLinkedinIn className="text-xl text-sky-500" />,
-      url: "https://www.linkedin.com/in/abdul-quddus-158643273/", // Replace with your actual URL
+      url: "https://www.linkedin.com/in/quddus-larik/", // Replace with your actual URL
     },
     {
       name: "Stack Overflow",
@@ -79,6 +99,10 @@ const Page: React.FC = () => {
       url: "https://t.me/quddus", // Replace with your actual URL
     },
   ];
+
+  if (action === "success") {
+    addToast({ title: "Email", description: "Message sent successfully! Thanks for contacting Me", color: "success" });
+  }
 
   return (
     <div className="text-white bg-slate-950">
@@ -137,8 +161,19 @@ const Page: React.FC = () => {
               >
                 Send
               </Button>
+
             </div>
           </Form>
+          {action === "sending" && (
+            <Chip color="warning">Sending message...</Chip>
+          )}
+          {action === "success" && (
+            <Chip color="success">Message sent successfully!</Chip>
+          )
+          }
+          {action === "error" && (
+            <Chip color="danger">Failed to send. Try again later.</Chip>
+          )}
         </div>
         <div className="flex flex-col items-center w-full h-screen gap-6 px-8 pt-10 lg:pt-40 lg:px-14 bg-slate-950">
           <div className="flex flex-col w-full gap-4 p-4 rounded-2xl bg-slate-900">
@@ -170,18 +205,18 @@ const Page: React.FC = () => {
                 </Tooltip>
               ))}
             </div>
-            
+
           </div>
           <div className="flex flex-col w-full gap-4 p-4 rounded-2xl bg-slate-900">
             <div className="flex flex-row justify-start gap-4">
-            <img src={Pic.src} alt="Abdul Quddus" className="w-12 h-12 rounded-full lg:h-20 lg:w-20 ring ring-slate-200" />
-            <div className="flex flex-col items-start w-full gap-0">
-              <p className="text-lg lg:text-2xl font-clash text-slate-100">Abdul Quddus</p>
-              <p className="text-tiny font-poppins-rg">MERN Stack Developer</p>
-            </div>
+              <img src={Pic.src} alt="Abdul Quddus" className="w-12 h-12 rounded-full lg:h-20 lg:w-20 ring ring-slate-200" />
+              <div className="flex flex-col items-start w-full gap-0">
+                <p className="text-lg lg:text-2xl font-clash text-slate-100">Abdul Quddus</p>
+                <p className="text-tiny font-poppins-rg">MERN Stack Developer</p>
+              </div>
             </div>
             <p className="text-small lg:text-md font-poppins-rg">
-            I'm Abdul Quddus, a Junior MERN Stack Developer focused on clean, responsive full-stack apps. I've built real-world projects like EMS and eCommerce platforms with Stripe and Redux, and I'm exploring authentication, Web3, and ElectronJS.
+              I'm Abdul Quddus, a Junior MERN Stack Developer focused on clean, responsive full-stack apps. I've built real-world projects like EMS and eCommerce platforms with Stripe and Redux, and I'm exploring authentication, Web3, and ElectronJS.
             </p>
           </div>
         </div>
