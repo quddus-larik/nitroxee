@@ -2,12 +2,12 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 
-import { Providers } from "./providers";
+import { Providers } from "@/app/providers";
 
 import { siteConfig } from "@/config/site";
-import Navbar from "@/components/nav";
-import Footer from "@/components/footer";
-import BottomNav from "@/components/nav_bottom";
+import Navbar from "@components/nav";
+import Footer from "@components/footer";
+import BottomNav from "@components/nav_bottom";
 
 import AnimatedCursor from "react-animated-cursor";
 

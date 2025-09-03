@@ -5,7 +5,7 @@ import {
   SiReact,
   SiNodedotjs,
 } from "react-icons/si";
-import Heads from "./heads";
+import Heads from "@components/heads";
 
 type TechStackIcon = {
   name: string;

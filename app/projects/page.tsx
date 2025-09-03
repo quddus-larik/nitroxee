@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Image, Button, Chip, Link, Code, ButtonGroup } from "@heroui/react";
+import { Image, Button} from "@heroui/react";
 import {
     SiReact,
     SiVite,

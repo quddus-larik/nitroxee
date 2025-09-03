@@ -34,7 +34,7 @@ const Page: React.FC = () => {
   }, []);
 
   const router = useRouter();
-  const CV_PDF = process.env.VITE_CV_PDF;
+  const CV_PDF = process.env.CV_PDF;
 
   const initialAwards = [
     {

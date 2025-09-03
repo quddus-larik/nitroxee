@@ -1,5 +1,5 @@
 import React from "react";
-import ScrollFloat from "../libs/ScrollFloat/ScrollFloat";
+import ScrollFloat from "@libs/ScrollFloat/ScrollFloat";
 import { Avatar, AvatarGroup } from "@heroui/react";
 import { HiOutlineGlobe } from "react-icons/hi";
 import { MdOutlineDesignServices } from "react-icons/md";

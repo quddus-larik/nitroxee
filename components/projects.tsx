@@ -1,9 +1,9 @@
 import type React from "react";
-import Heads from "./heads";
+import Heads from "@components/heads";
 import Qvis_EMS from "@assets/images/qvis-ems-app.png";
 import { Image, Button } from "@heroui/react";
 import { FiArrowUpRight } from "react-icons/fi";
-import useWindowSize from "../hooks/useWindowSize";
+import useWindowSize from "@hooks/useWindowSize";
 interface Project {
   title: string;
   description: string;

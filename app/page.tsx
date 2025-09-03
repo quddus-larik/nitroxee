@@ -10,7 +10,7 @@ import {
 } from "react-icons/fi";
 import { SiExpress, SiMongodb, SiNodedotjs, SiReact } from "react-icons/si";
 import dynamic from "next/dynamic";
-import CurvedLoop from "@/libs/CurvedLoop/curvedText";
+import CurvedLoop from "@libs/CurvedLoop/curvedText";
 
 // Lazy load components that are not immediately visible on page load
 const AboutMe = dynamic(() => import("@components/aboutme"));
