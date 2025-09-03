@@ -1,5 +1,5 @@
-"use client"
-import React, { useEffect } from "react";
+"use client";
+import React from "react";
 import { motion } from "framer-motion";
 import { Image, Button} from "@heroui/react";
 import {
@@ -101,9 +101,6 @@ const projects = [
 ];
 
 const Page: React.FC = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
     const { width } = useWindowSize();
     const isSmallSize: boolean = width <= 320;
     return (

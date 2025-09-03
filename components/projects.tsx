@@ -1,6 +1,5 @@
 import type React from "react";
 import Heads from "@components/heads";
-import Qvis_EMS from "@assets/images/qvis-ems-app.png";
 import { Image, Button } from "@heroui/react";
 import { FiArrowUpRight } from "react-icons/fi";
 import useWindowSize from "@hooks/useWindowSize";
@@ -22,7 +21,7 @@ const projects: Project[] = [
     title: "Qvis Employee Management System",
     description:
       "A Web Application for managing Employees Tasks on a Regular Basis",
-    imageSrc: Qvis_EMS.src,
+    imageSrc: "/images/qvis-ems-app.png",
     alt: "Screenshot of Qvis Employee Management System",
     url: "https://qvis-ems.netlify.app",
     githubIssueUrl:

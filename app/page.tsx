@@ -21,10 +21,7 @@ const DesignFlow = dynamic(() => import("@components/designflow"));
 const Page: React.FC = () => {
   const Router = useRouter();
 
-  // Scroll to top on component mount for a consistent user experience
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  
 
   // Memoize the links array to prevent unnecessary re-creations
   const links = useMemo(
@@ -60,7 +57,7 @@ const Page: React.FC = () => {
   }, []);
   const handleClick = (url: string) => {
     console.log("URL received:", url); // Add this line
-    window.open("https://" + url, "_blank");
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
