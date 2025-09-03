@@ -18,13 +18,7 @@ const ScrollVelocity = dynamic(
 const Heads = dynamic(() => import("@components/heads"));
 const SkillMarque = dynamic(() => import("@components/skillmarque"));
 
-// Import images directly
-import myPIC from "/images/quddus.jpg";
-import Algo_Awards from "/images/algo_certificate.png";
-import JS_certificate from "/images/js.png";
-import Full_Stack_certificate from "/images/fullstack.png";
-import MY_SQL_certificate from "/images/mysql.png";
-import Azure_certificate from "/images/azure.webp";
+
 import dynamic from "next/dynamic";
 
 
@@ -37,38 +31,39 @@ const Page: React.FC = () => {
   const CV_PDF = process.env.CV_PDF;
 
   const initialAwards = [
-    {
-      title: "Web3.0 Development",
-      institute: "Algorand Inc",
-      url: "https://www.algorand.com",
-      image: Algo_Awards,
-    },
-    {
-      title: "Full Stack Development",
-      institute: "codeSignal Inc",
-      url: "https://codesignal.com/",
-      image: Full_Stack_certificate,
-    },
-    {
-      title: "Microsoft Azure",
-      institute: "Microsoft Inc",
-      url: "https://microsoft.com/",
-      image: Azure_certificate
-    }
-  ];
+  {
+    title: "Web3.0 Development",
+    institute: "Algorand Inc",
+    url: "https://www.algorand.com",
+    image: "/images/algo_certificate.png",
+  },
+  {
+    title: "Full Stack Development",
+    institute: "codeSignal Inc",
+    url: "https://codesignal.com/",
+    image: "/images/fullstack.png",
+  },
+  {
+    title: "Microsoft Azure",
+    institute: "Microsoft Inc",
+    url: "https://microsoft.com/",
+    image: "/images/azure.webp",
+  },
+];
+
   
   const additionalAwards = [
     {
       title: "JavaScript Development",
       institute: "codeSignal Inc",
       url: "https://codesignal.com/",
-      image: JS_certificate,
+      image: "/images/js.png",
     },
     {
       title: "MySQL Development",
       institute: "codeSignal Inc",
       url: "https://codesignal.com/",
-      image: MY_SQL_certificate,
+      image: "/images/mysql.png",
     }
   ];
 
@@ -94,7 +89,7 @@ const Page: React.FC = () => {
             </div>
 
             <Image
-              src={myPIC.src}
+              src="/images/quddus.jpg"
               alt="Profile"
               className="rounded-full h-64 md:h-[300px] shadow-lg ring-1 ring-lime-400"
               loading="lazy"
@@ -189,7 +184,7 @@ const Page: React.FC = () => {
               {/* Using @heroui/react Image component for award images */}
 
               <Image
-                src={itm.image.src}
+                src={itm.image}
                 className="max-w-72 md:min-w-64"
                 isZoomed
                 alt={itm.title}
