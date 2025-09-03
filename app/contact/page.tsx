@@ -1,7 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react";
 import { Form, Input, Button, Textarea, Tooltip, addToast, Chip } from "@heroui/react";
-import Pic from '/images/quddus.jpg';
 import {
   FaGithubAlt,
   FaThreads,
@@ -209,7 +208,7 @@ const Page: React.FC = () => {
           </div>
           <div className="flex flex-col w-full gap-4 p-4 rounded-2xl bg-slate-900">
             <div className="flex flex-row justify-start gap-4">
-              <img src={Pic.src} alt="Abdul Quddus" className="w-12 h-12 rounded-full lg:h-20 lg:w-20 ring ring-slate-200" />
+              <img src={"/images/quddus.jpg"} alt="Abdul Quddus" className="w-12 h-12 rounded-full lg:h-20 lg:w-20 ring ring-slate-200" />
               <div className="flex flex-col items-start w-full gap-0">
                 <p className="text-lg lg:text-2xl font-clash text-slate-100">Abdul Quddus</p>
                 <p className="text-tiny font-poppins-rg">MERN Stack Developer</p>
