@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react";
 import { Form, Input, Button, Textarea, Tooltip, addToast, Chip } from "@heroui/react";
-import Pic from '@assets/images/quddus.jpg';
+import Pic from '/images/quddus.jpg';
 import {
   FaGithubAlt,
   FaThreads,

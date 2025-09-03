@@ -19,12 +19,12 @@ const Heads = dynamic(() => import("@components/heads"));
 const SkillMarque = dynamic(() => import("@components/skillmarque"));
 
 // Import images directly
-import myPIC from "@assets/images/quddus.jpg";
-import Algo_Awards from "@assets/images/algo_certificate.png";
-import JS_certificate from "@assets/images/js.png";
-import Full_Stack_certificate from "@assets/images/fullstack.png";
-import MY_SQL_certificate from "@assets/images/mysql.png";
-import Azure_certificate from "@assets/images/azure.webp";
+import myPIC from "/images/quddus.jpg";
+import Algo_Awards from "/images/algo_certificate.png";
+import JS_certificate from "/images/js.png";
+import Full_Stack_certificate from "/images/fullstack.png";
+import MY_SQL_certificate from "/images/mysql.png";
+import Azure_certificate from "/images/azure.webp";
 import dynamic from "next/dynamic";
 
 
