@@ -1,0 +1,11 @@
+import React from "react"; 
+
+ const SupabaseIcon = (props) => ( 
+ <svg  xmlns="http://www.w3.org/2000/svg" width={24} height={24} 
+fill={"currentColor"}  viewBox="0 0 24 24" {...props} >
+{/* Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free */}
+<path d="M19.98 9.12h-8.03l-.04-6.26c-.01-.82-1.05-1.17-1.56-.53l-7.7 9.71c-.91 1.15-.09 2.84 1.37 2.84h7.97l.09 6.26c.01.82 1.05 1.17 1.56.53l7.71-9.71c.91-1.15.09-2.84-1.37-2.84"></path>
+</svg>
+);
+
+export default SupabaseIcon;

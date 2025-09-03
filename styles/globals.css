@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+/* ---------------------------
+   ✅ Poppins Variants
+   --------------------------- */
+@font-face {
+  font-family: "poppins-md";
+  src: url("/fonts/poppins/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "poppins-bd";
+  src: url("/fonts/poppins/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "poppins-rg";
+  src: url("/fonts/poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "poppins-tn";
+  src: url("/fonts/poppins/Poppins-Thin.ttf");
+}
+
+/* ---------------------------
+   ✅ Other Fonts
+   --------------------------- */
+@font-face {
+  font-family: "clash";
+  src: url("/fonts/clash/clash.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "akira-bd";
+  src: url("/fonts/akira/akira_bold.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "neue-md";
+  src: url("/fonts/Neue/NeueMontreal-Medium.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "neue-bd";
+  src: url("/fonts/Neue/NeueMontreal-Bold.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "neue-rg";
+  src: url("/fonts/Neue/NeueMontreal-Regular.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "inter";
+  src: url("/fonts/inter/inter.ttf");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* ---------------------------
+   ✅ Tailwind Theme Mapping
+   --------------------------- */
+@theme {
+  --font-poppins-md: "poppins-md";
+  --font-poppins-bd: "poppins-bd";
+  --font-poppins-rg: "poppins-rg";
+  --font-poppins-tn: "poppins-tn";
+  --font-clash: "clash";
+  --font-akira-bd: "akira-bd";
+  --font-neue: "neue-rg";
+  --font-neue-bd: "neue-bd";
+  --font-neue-md: "neue-md";
+  --font-inter: "inter";
+}
+
+/* ---------------------------
+   ✅ Extras
+   --------------------------- */
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur-md {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+::selection {
+  background-color: rgb(56, 56, 56);
+  color: #b3ff41;
+}
