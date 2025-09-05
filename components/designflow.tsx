@@ -38,10 +38,9 @@ const sections = [
     description:
       "I continuously improve my projects by iterating on both functionality and design. Converting design to code, I upgrade my tech stack based on project needs, and document each version to track progress. This allows me to build scalable applications over time.",
     avatars: [
-      "https://static-00.iconduck.com/assets.00/stack-overflow-icon-256x256-c4mcfbrg.png",
       "https://images.seeklogo.com/logo-png/47/1/node-js-logo-png_seeklogo-479905.png",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIOVOH4NHf85lJfAD7WCeOrqx3gvTLWl5eVQ&s",
-      "https://www.cdnlogo.com/logos/r/85/react.svg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFggf9yNRN9xCYku8XMEkSE0LU9uMhkYbehQ&s"
     ],
   },
 ];
@@ -57,7 +56,7 @@ const DesignFlow: React.FC = () => {
             scrollStart="center bottom+=40%"
             scrollEnd="bottom bottom-=50%"
             stagger={0.03}
-            textClassName="text-lime-300 font-akira-bd tracking-wider md:text-6xl lg:text-7xl"
+            textClassName="text-lime-300 font-akira-bd tracking-wider md:text-6xl lg:text-8xl"
           >
             {"{ WORK FLOW }"}
           </ScrollFloat>

@@ -1,6 +1,6 @@
 "use client"
-import React, { useEffect, useState, Suspense } from "react";
-import { Button, Divider, Image, Link, Spinner, Tooltip } from "@heroui/react"; // Re-added Image component
+import React, { useEffect, useState } from "react";
+import { Button, Divider, Image, Link, Tooltip } from "@heroui/react"; // Re-added Image component
 import { useRouter } from "next/navigation";
 import { FiArrowUpLeft, FiArrowUpRight } from "react-icons/fi";
 import {
@@ -151,22 +151,19 @@ const Page: React.FC = () => {
 
         <div className="relative mt-4 mb-4 overflow-hidden opacity-15">
           <Divider className="mt-6 mb-2 bg-slate-200" />
-          <Suspense fallback={<div>Loading Scroll Velocity...</div>}>
+         
             <ScrollVelocity
               texts={[
-                "| Full-Stack MERN Developer | React.js Specialist | Node.js Backend Engineer | MongoDB + Express Expert | UI/UX Focused | Clean Code Advocate | Scalable Web Apps | RESTful API Builder | TailwindCSS Designer | Figma-Driven Design | Real-Time Features | Cloud Deployment | Team Collaboration Ready | Building the Future, One Line at a Time ",
+                "✧ Full Stack MERN Developer ✧ React.js Specialist ✧ Node.js Backend Engineer ✧ MongoDB + Express Expert ✧ UI/UX Focused ✧ Clean Code Advocate ✧ Scalable Web Apps ✧ RESTful API Builder ✧ TailwindCSS Designer ✧ Figma-Driven Design ✧ Real-Time Features ✧ Cloud Deployment ✧ Team Collaboration Ready ✧ Building the Future, One Line at a Time ",
               ]}
               velocity={40}
-              className="font-inter whitespace-nowrap text-slate-200"
+              className="font-poppins-rg whitespace-nowrap text-slate-200"
             />
-          </Suspense>
           <Divider className="mt-2 bg-slate-200" />
           <div className="absolute top-0 left-0 w-24 h-full pointer-events-none bg-gradient-to-r from-slate-950 to-transparent" />
           <div className="absolute top-0 right-0 w-24 h-full pointer-events-none bg-gradient-to-l from-slate-950 to-transparent" />
         </div>
-        <Suspense fallback={<div>Loading Skills...</div>}>
           <SkillMarque />
-        </Suspense>
         <p className="w-full p-4 pt-6 text-center text-slate-300 font-poppins-rg">
           I’m a passionate Junior MERN Stack Developer with hands-on experience
           in building full-stack web applications. I focus on clean code,
@@ -214,9 +211,7 @@ const Page: React.FC = () => {
             </Button>
           )}
         </div>
-        <Suspense fallback={<div>Loading Skills Catalog Heading...</div>}>
           <Heads title="Skills Catalog" />
-        </Suspense>
         <div className="flex flex-col gap-2 px-0 py-2 mt-4 sm:px-3 lg:gap-10 lg:px-20 md:flex-row">
           <div className="flex w-full gap-10 p-4 max-h-60 bg-slate-100 rounded-3xl">
             <div className="w-full">

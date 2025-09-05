@@ -25,6 +25,9 @@ const Footer: React.FC = () => {
         Style
         <Button color="success" radius="full" className="ml-4 bg-lime-400 font-poppins-md" size="sm" onPress={()=> Router.push("/contact")} startContent={<FiArrowUpRight className="text-md text-gray-950" />}>Contact</Button>
       </p> 
+      <p className="w-full text-slate-400 text-tiny lg:text-small font-poppins-rg">
+        © {new Date().getFullYear()} Abdul Quddus. All rights reserved. Unauthorized use or reproduction of content is prohibited.
+      </p>
     </div>
   );
 };

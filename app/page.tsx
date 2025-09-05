@@ -192,9 +192,9 @@ const Page: React.FC = () => {
         <div className="relative overflow-hidden rotate-1 opacity-20">
           <Divider className="mt-6 mb-2 bg-slate-200" />
           <ScrollVelocity
-            texts={["REQUIREMENTS DESIGNS DEVELOPEMENT TESTING "]}
+            texts={["REQUIREMENTS ✧ DESIGNS ✧ DEVELOPEMENT ✧ TESTING ✧ "]}
             velocity={45}
-            className="text-white custom-scroll-text font-neue-rg whitespace-nowrap"
+            className="text-white custom-scroll-text font-poppins-bd whitespace-nowrap"
           />
           <Divider className="mt-2 bg-slate-200" />
           <div className="absolute top-0 left-0 w-24 h-full pointer-events-none bg-gradient-to-r from-slate-950 to-transparent" />
@@ -204,9 +204,9 @@ const Page: React.FC = () => {
         <div className="relative mt-4 overflow-hidden -rotate-1 opacity-15">
           <Divider className="mt-6 mb-2 bg-slate-200" />
           <ScrollVelocity
-            texts={["MONGODB ! EXPRESSJS ! REACTJS ! NODEJS ! "]}
+            texts={["MONGODB ✦ EXPRESSJS ✦ REACTJS ✦ NODEJS ✦ "]}
             velocity={40}
-            className="custom-scroll-text font-neue-rg whitespace-nowrap text-slate-200"
+            className="custom-scroll-text font-poppins-md whitespace-nowrap text-slate-200"
           />
           <Divider className="mt-2 bg-slate-200" />
           <div className="absolute top-0 left-0 w-24 h-full pointer-events-none bg-gradient-to-r from-slate-950 to-transparent" />
