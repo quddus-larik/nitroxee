@@ -14,7 +14,7 @@ import AnimatedCursor from "react-animated-cursor";
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nitroxee.netlify.app"),
+  metadataBase: new URL("https://nitroxee.vercel.app"),
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
