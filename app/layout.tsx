@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
-import { AppProgressProvider as ProgressProvider } from '@bprogress/next';
 
 import { Providers } from "@/app/providers";
 
