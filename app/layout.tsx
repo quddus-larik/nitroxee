@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
+import { AppProgressProvider as ProgressProvider } from '@bprogress/next';
 
 import { Providers } from "@/app/providers";
 
@@ -12,7 +13,9 @@ import BottomNav from "@components/nav_bottom";
 import AnimatedCursor from "react-animated-cursor";
 
 
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nitroxee.netlify.app"),
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
@@ -20,6 +23,28 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   icons: {
     icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: "https://nitroxee.vercel.app",  // My domain
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: "/web-cover.png", // image in /public
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: ["/web-cover.png"], // ✅ same image
   },
 };
 
@@ -29,8 +54,6 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
 };
-
-
 
 
 
@@ -49,34 +72,34 @@ export default function RootLayout({
         )}
       >
         <Providers>
-            <AnimatedCursor
-          innerSize={15}
-          outerSize={20}
-          innerScale={1}
-          outerScale={2.5}
-          outerAlpha={0}
-          innerStyle={{ backgroundColor: "#fff" }}
-          outerStyle={{ border: "3px solid #BEF264" }}
-          clickables={[
-            "a",
-            'input[type="text"]',
-            'input[type="email"]',
-            'input[type="number"]',
-            'input[type="submit"]',
-            'input[type="image"]',
-            "label[for]",
-            "select",
-            "textarea",
-            "button",
-            ".link",
-          ]}
-        />
-            <Navbar />
-            <main>
-              {children}
-            </main>
-            <Footer/>
-            <BottomNav/>
+          <AnimatedCursor
+            innerSize={15}
+            outerSize={20}
+            innerScale={1}
+            outerScale={2.5}
+            outerAlpha={0}
+            innerStyle={{ backgroundColor: "#fff" }}
+            outerStyle={{ border: "3px solid #BEF264" }}
+            clickables={[
+              "a",
+              'input[type="text"]',
+              'input[type="email"]',
+              'input[type="number"]',
+              'input[type="submit"]',
+              'input[type="image"]',
+              "label[for]",
+              "select",
+              "textarea",
+              "button",
+              ".link",
+            ]}
+          />
+          <Navbar />
+          <main>
+            {children}
+          </main>
+          <Footer />
+          <BottomNav />
         </Providers>
       </body>
     </html>
