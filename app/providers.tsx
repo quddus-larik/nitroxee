@@ -6,6 +6,7 @@ import * as React from "react";
 import { HeroUIProvider } from "@heroui/system";
 import { useRouter } from "next/navigation";
 import { ToastProvider } from "@heroui/react";
+import { AppProgressProvider as ProgressProvider } from '@bprogress/next';
 
 export interface ProvidersProps {
   children: React.ReactNode;
@@ -27,7 +28,14 @@ export function Providers({ children }: ProvidersProps) {
     <HeroUIProvider navigate={router.push}>
       <ToastProvider placement="bottom-right" />
       <div className="bg-slate-950">
+        <ProgressProvider 
+          height="4px"
+          color="#61e363"
+          options={{ showSpinner: false }}
+          shallowRouting
+        >
       {children}
+        </ProgressProvider>
       </div>
     </HeroUIProvider>
   );
