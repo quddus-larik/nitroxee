@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: "https://nitroxee.vercel.app/web-cover.png", // image in /public
+        url: "/images/web-cover.png", // image in /public
         width: 1200,
         height: 630,
         alt: siteConfig.name,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ["https://nitroxee.vercel.app/web-cover.png"], // ✅ same image
+    images: ["/web-cover.png"], // ✅ same image
   },
 };
 
