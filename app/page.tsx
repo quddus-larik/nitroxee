@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useCallback, Suspense, useMemo } from "react";
+import React, { useEffect, useCallback, useMemo } from "react";
 import { Divider, Link, Button, Chip, Spinner } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -10,7 +10,6 @@ import {
 } from "react-icons/fi";
 import { SiExpress, SiMongodb, SiNodedotjs, SiReact } from "react-icons/si";
 import dynamic from "next/dynamic";
-import CurvedLoop from "@libs/CurvedLoop/curvedText";
 
 // Lazy load components that are not immediately visible on page load
 const AboutMe = dynamic(() => import("@components/aboutme"));
@@ -61,19 +60,8 @@ const Page: React.FC = () => {
   };
 
   return (
-    <Suspense fallback={<div className="flex items-center justify-center">
-      <Spinner size="lg" color="success" />
-    </div>}>
       <div className="overflow-hidden bg-slate-950">
         <title>Quddus Portfolio</title>
-        <meta
-          name="description"
-          content="Portfolio of Abdul Quddus, a passionate MERN stack developer."
-        />
-        <meta
-          name="keywords"
-          content="MERN, React, Developer, Portfolio, JavaScript, TypeScript, Junior Web Developer, Web developer portfolio, web developer portfolio, netlify site, web developer netlify, Software"
-        />
         {/* Main Content Area */}
         <div className="flex flex-col items-center justify-center px-8 md:px-20 min-h-svh">
           <Chip color="warning" variant="solid" size="sm" className="mb-1">
@@ -134,7 +122,7 @@ const Page: React.FC = () => {
               opacity: 100,
               y: 0,
             }}
-            className="w-full text-tiny font-poppins-rg text-slate-400"
+            className="w-full text-tiny font-poppins-rg text-slate-400 mt-8"
           >
             I specialize in crafting full-stack MERN applications that turn
             ideas into reliable, intuitive, and goal-oriented web products.
@@ -191,14 +179,14 @@ const Page: React.FC = () => {
             </motion.div>
           </div>
         </div>
-        <CurvedLoop
+        {/* <CurvedLoop
                   marqueeText="Be ✦ Creative ✦ With ✦ React ✦ Bits ✦"
                   speed={2}
                   curveAmount={100}
                   direction="right"
                   interactive={true}
                   className="text-5xl"
-                />
+                /> */}
 
         {/* ScrollVelocity Sections */}
         <div className="relative overflow-hidden rotate-1 opacity-20">
@@ -226,20 +214,12 @@ const Page: React.FC = () => {
         </div>
 
         {/* Other Components */}
-        <Suspense
-          fallback={
-            <div>
-              <Spinner color="primary" size="lg" />
-            </div>
-          }
-        >
+        
           <AboutMe />
           <Projects />
           <SkillMarque />
           <DesignFlow />
-        </Suspense>
       </div>
-    </Suspense>
   );
 };
 
