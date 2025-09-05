@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "abdul-quddus-portfolio",
+    card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
     images: ["https://nitroxee.vercel.app/web-cover.png"], // ✅ same image
