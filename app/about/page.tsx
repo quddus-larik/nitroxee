@@ -28,7 +28,7 @@ const Page: React.FC = () => {
   }, []);
 
   const router = useRouter();
-  const CV_PDF = process.env.CV_PDF;
+  const CV_PDF = process.env.CV_PDF || 'https://drive.google.com/file/d/1IlyPzciiXtEYWziGnMw1oXYqxkg9Vomv/view?usp=drive_link';
 
   const initialAwards = [
   {
