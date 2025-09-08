@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react";
-import { Form, Input, Button, Textarea, Tooltip, addToast, Chip } from "@heroui/react";
+import { Form, Input, Button, Textarea, Tooltip, addToast, Chip, Spinner } from "@heroui/react";
 import {
   FaGithubAlt,
   FaThreads,
@@ -164,7 +164,9 @@ const Page: React.FC = () => {
             </div>
           </Form>
           {action === "sending" && (
-            <Chip color="warning">Sending message...</Chip>
+            <div className="flex p-1 items-center">
+            <Chip color="warning">Sending message...</Chip><Spinner size="sm" color="primary"/>
+            </div>
           )}
           {action === "success" && (
             <Chip color="success">Message sent successfully!</Chip>
