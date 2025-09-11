@@ -44,16 +44,7 @@ const Page: React.FC = () => {
     Router.push("/about");
   }, [Router]);
 
-  // Alert for maintenance, consider a more user-friendly alternative
-  useEffect(() => {
-    // Only show the alert once per session
-    if (!sessionStorage.getItem("maintenanceAlertShown")) {
-      alert(
-        "Notice: This site is currently under maintenance. Please check back soon."
-      );
-      sessionStorage.setItem("maintenanceAlertShown", "true");
-    }
-  }, []);
+  
   const handleClick = (url: string) => {
     console.log("URL received:", url); // Add this line
     window.open(url, "_blank", "noopener,noreferrer");
