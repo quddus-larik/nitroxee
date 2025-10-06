@@ -25,15 +25,21 @@ const Page: React.FC = () => {
   // Memoize the links array to prevent unnecessary re-creations
   const links = useMemo(
     () => [
-      { name: "GITHUB", src: "https://github.com/EnderTonol" },
+      { 
+        name: "GITHUB", 
+        src: "https://github.com/quddus-larik" 
+      },
       {
         name: "LINKEDIN",
-        src: "https://www.linkedin.com/abdul-quddus-158643273/",
+        src: "https://www.linkedin.com/in/quddus-larik",
       },
-      { name: "THREADS", src: "./" },
+      { 
+        name: "INSTA", 
+        src: "https://www.instagram.com/unreal.quddus" 
+      },
       {
         name: "EMAIL",
-        src: "mailto:example@gmail.com?subject=Hello&body=I want to talk about... you by portfolio",
+        src: "mailto:qudduslarek@proton.me?subject=Hello&body=I want to talk about... you by portfolio",
       },
     ],
     []
@@ -170,14 +176,7 @@ const Page: React.FC = () => {
             </motion.div>
           </div>
         </div>
-        {/* <CurvedLoop
-                  marqueeText="Be ✦ Creative ✦ With ✦ React ✦ Bits ✦"
-                  speed={2}
-                  curveAmount={100}
-                  direction="right"
-                  interactive={true}
-                  className="text-5xl"
-                /> */}
+        
 
         {/* ScrollVelocity Sections */}
         <div className="relative overflow-hidden rotate-1 opacity-20">

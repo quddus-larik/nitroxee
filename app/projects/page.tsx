@@ -149,8 +149,8 @@ const Page: React.FC = () => {
                             size="md"
                             startContent={<FaDribbble className="text-xl" />}
                             radius="full"
-                            className="mt-2 mr-2 text-xl font-semibold font-clash bg-[#FFABE7]"
-                            onPress={() => window.open("https://dribbble.com/NitroXee", "_blank")}
+                            className="mt-2 mr-2 text-xl font-clash bg-[#FFABE7]"
+                            onPress={() => window.open("https://dribbble.com/abdul-quddus", "_blank")}
                         >
                             dribbble
                         </Button>
@@ -158,7 +158,7 @@ const Page: React.FC = () => {
                             size="md"
                             startContent={<FaGithub className="text-xl" />}
                             radius="full"
-                            className="mt-2 text-xl font-semibold bg-gray-200 font-clash"
+                            className="mt-2 text-xl bg-gray-200 font-clash"
                             onPress={() => window.open("https://github.com/quddus-larik", "_blank")}
                         >
                             github
