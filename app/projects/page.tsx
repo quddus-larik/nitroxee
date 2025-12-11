@@ -56,8 +56,8 @@ const projects = [
         imageSrc:
             "https://github.com/quddus-larik/Nitroxes.ai/raw/main/snapshots/home.png",
         alt: "Screenshot of Nitroxes AI",
-        githubRepoUrl: "https://github.com/EnderTonol/Nitroxes.ai",
-        githubIssue: "https://github.com/EnderTonol/Nitroxes.ai/issue",
+        githubRepoUrl: "https://github.com/quddus-larik/Nitroxes.ai",
+        githubIssue: "https://github.com/quddus-larik/Nitroxes.ai/issue",
         date: "2024",
         chipLabel: "#01",
         techStack: [
@@ -72,18 +72,17 @@ const projects = [
         url: "",
     },
     {
-        title: "Qvis EMS",
+        title: "OneManage",
         description:
-            "A lightweight, backend-free employee management app with dashboards, task and department handling, and meeting scheduling — built using React and Local Storage for persistent data.",
-        imageSrc:
-            "https://github.com/quddus-larik/employee-management-system/raw/main/src/assets/scrs/fl1.png",
-        alt: "Screenshot of Qvis EMS",
-        githubRepoUrl: "https://github.com/EnderTonol/Nitroxes.ai",
-        githubIssue: "https://github.com/EnderTonol/Nitroxes.ai/issue",
+            "A Employee Management System for Small Organizations to manage employees details - build with Nextjs and Supabase DB SQL",
+        imageSrc: "https://github.com/quddus-larik/oneManage/raw/main/media/thumbnail.png",
+        alt: "Screenshot of oneManage",
+        githubRepoUrl: "https://github.com/quddus-larik/oneManage",
+        githubIssue: "https://github.com/quddus-larik/oneManage/issue",
         date: "2024",
         chipLabel: "#02",
-        techStack: ["React", "Vite", "TailwindCSS", "NextUI", "MaterialUI"],
-        url: "https://qvis-ems.netlify.app",
+        techStack: ["NextJS", "TailwindCSS", "NextUI", "MaterialUI"],
+        url: "https://one-manage.vercel.app",
     },
     {
         title: "Nitroxes News",
