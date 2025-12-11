@@ -193,6 +193,7 @@ const Page: React.FC = () => {
 
         <div className="relative mt-4 overflow-hidden -rotate-1 opacity-15">
           <Divider className="mt-6 mb-2 bg-slate-200" />
+          
           <ScrollVelocity
             texts={["MONGODB ✦ EXPRESSJS ✦ REACTJS ✦ NODEJS ✦ "]}
             velocity={40}
