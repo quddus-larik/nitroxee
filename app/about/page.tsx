@@ -42,13 +42,7 @@ const Page: React.FC = () => {
     institute: "codeSignal Inc",
     url: "https://codesignal.com/",
     image: "/images/fullstack.png",
-  },
-  {
-    title: "Microsoft Azure",
-    institute: "Microsoft Inc",
-    url: "https://microsoft.com/",
-    image: "/images/azure.webp",
-  },
+  }
 ];
 
   
@@ -87,7 +81,6 @@ const Page: React.FC = () => {
                 <FiArrowUpRight className="text-2xl text-gray-900 transition hover:rotate-45" />
               </button>
             </div>
-
             <Image
               src="/images/quddus.jpg"
               alt="Profile"
@@ -151,7 +144,6 @@ const Page: React.FC = () => {
 
         <div className="relative mt-4 mb-4 overflow-hidden opacity-15">
           <Divider className="mt-6 mb-2 bg-slate-200" />
-         
             <ScrollVelocity
               texts={[
                 "✧ Full Stack MERN Developer ✧ React.js Specialist ✧ Node.js Backend Engineer ✧ MongoDB + Express Expert ✧ UI/UX Focused ✧ Clean Code Advocate ✧ Scalable Web Apps ✧ RESTful API Builder ✧ TailwindCSS Designer ✧ Figma-Driven Design ✧ Real-Time Features ✧ Cloud Deployment ✧ Team Collaboration Ready ✧ Building the Future, One Line at a Time ",
