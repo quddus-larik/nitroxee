@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Image, Button} from "@heroui/react";
+import { Image, Button, Link} from "@heroui/react";
 import {
     SiReact,
     SiVite,
@@ -18,7 +18,12 @@ import {
     SiJsonwebtokens,
     SiNextdotjs,
     SiGraphql,
-    SiRedis
+    SiRedis,
+    SiShadcnui,
+    SiSupabase,
+    SiPostgresql,
+    SiClerk,
+    SiGithub
 } from "react-icons/si";
 import {
     FaDribbble,
@@ -28,6 +33,7 @@ import {
 import { FiArrowUpLeft, FiArrowUpRight } from "react-icons/fi";
 import Heads from "@components/heads";
 import useWindowSize from "@hooks/useWindowSize";
+import { MdMore } from "react-icons/md";
 
 const techIcons: Record<string, JSX.Element> = {
     Html: <SiHtml5 className="text-orange-600" />,
@@ -46,30 +52,35 @@ const techIcons: Record<string, JSX.Element> = {
     Express: <SiExpress className="text-gray-600" />,
     GraphQL: <SiGraphql className="text-pink-500" />,
     Redis: <SiRedis className="text-red-600" />,
+    ShadCN: <SiShadcnui className="text-white"/>,
+    Supabase: <SiSupabase className="text-green-300"/>,
+    PostgreSQL: <SiPostgresql className="text-sky-300"/>,
+    Clerk: <SiClerk className="text-gray-400"/>,
+    Github: <SiGithub className="text-white"/>,
+    More: <p className="text-white font-poppins-rg text-xs flex items-center justify-center px-2 py-0">---</p>
 };
 
 const projects = [
     {
-        title: "Nitroxes AI",
+        title: "oneRepo",
         description:
-            "AI chatbot powered by Gemini, featuring secure authentication, database integration, and a modern UI built with HeroUI and TailwindCSS.",
+            "A Github Assistant manage Insights in Next level with Automated AI Generation of Debug reports, Version docs, SRS and README in markdown code",
         imageSrc:
-            "https://github.com/quddus-larik/Nitroxes.ai/raw/main/snapshots/home.png",
-        alt: "Screenshot of Nitroxes AI",
-        githubRepoUrl: "https://github.com/quddus-larik/Nitroxes.ai",
-        githubIssue: "https://github.com/quddus-larik/Nitroxes.ai/issue",
+            "/media/one-repo.png",
+        alt: "Screenshot of Github Assistant",
+        githubRepoUrl: "https://github.com/quddus-larik/oneRepo",
+        githubIssue: "https://github.com/quddus-larik/oneRepo/issue",
         date: "2024",
-        chipLabel: "#01",
+        chipLabel: "#02",
         techStack: [
-            "React",
-            "Vite",
-            "TailwindCSS",
-            "NextUI",
-            "MongoDB",
-            "Express",
-            "Auth0",
+            "TypeScript",
+            "NextJS",
+            "ShadCN",
+            "Clerk",
+            "Github",
+            "Supabase",
+            "PostgreSQL"
         ],
-        url: "",
     },
     {
         title: "OneManage",
@@ -79,24 +90,28 @@ const projects = [
         alt: "Screenshot of oneManage",
         githubRepoUrl: "https://github.com/quddus-larik/oneManage",
         githubIssue: "https://github.com/quddus-larik/oneManage/issue",
-        date: "2024",
+        date: "2025",
         chipLabel: "#02",
-        techStack: ["NextJS", "TailwindCSS", "NextUI", "MaterialUI"],
+        techStack: ["NextJS", "TailwindCSS", "ShadCN", "Supabase","PostgreSQL","Clerk"],
         url: "https://one-manage.vercel.app",
     },
     {
-        title: "Nitroxes News",
+        title: "Memog",
         description:
-            "a sleek news web app to explore global articles, track current affairs, and dive into categories, sources, and keywords. It uses NewsAPI to aggregate headlines and stories from major publishers, with fast search, filters, and offline-aware caching.",
+            "A Mini Memory Game Built with basic html.",
         imageSrc:
-            "https://github.com/quddus-larik/News-application/raw/main/src/assets/demos/desk1.png",
-        alt: "Screenshot of Qvis EMS",
-        githubRepoUrl: "https://github.com/EnderTonol/News-application/",
+            "/media/memog.png",
+        alt: "Screenshot of Memog Game",
+        githubRepoUrl: "https://github.com/quddus-larik/Memory-Game",
+        githubIssue: "https://github.com/quddus-larik/Memory-Game/issue",
         date: "2024",
-        chipLabel: "#02",
-        techStack: ["React", "Vite", "TailwindCSS", "NextUI", "MaterialUI"],
-        url: "https://qvis-ems.netlify.app",
-    }
+        chipLabel: "#03",
+        techStack: [
+            "Html",
+            "Css",
+            "JavaScript"
+        ],
+    },
 ];
 
 const Page: React.FC = () => {
@@ -223,6 +238,7 @@ const Page: React.FC = () => {
                                 <p className="mt-2 text-slate-200 text-tiny lg:text-sm font-inter">
                                     {project.description}
                                 </p>
+                                { project.url && (<Link onClick={() => window.open(project.url)} className="text-white">{project.url.replace("https://","")}</Link>) }
                                 <h1 className="mt-2 text-tiny lg:text-sm font-poppins-rg text-slate-300">
                                     {project.date}
                                 </h1>
