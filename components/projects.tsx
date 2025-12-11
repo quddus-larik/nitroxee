@@ -18,28 +18,28 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Qvis Employee Management System",
+    title: "oneManage",
     description:
-      "A Web Application for managing Employees Tasks on a Regular Basis",
-    imageSrc: "/images/qvis-ems-app.png",
+      "A Employee Management System for Small Organizations to manage employees details.",
+    imageSrc: "https://github.com/quddus-larik/oneManage/raw/main/media/thumbnail.png",
     alt: "Screenshot of Qvis Employee Management System",
-    url: "https://qvis-ems.netlify.app",
+    url: "https://one-manage.vercel.app",
     githubIssueUrl:
-      "https://github.com/EnderTonol/employee-management-system/issues",
-    githubRepoUrl: "https://github.com/EnderTonol/employee-management-system",
-    year: "2024",
+      "https://github.com/quddus-larik/oneManage/issues",
+    githubRepoUrl: "https://github.com/quddus-larik/oneManage",
+    year: "2025",
     chipLabel: "#01"
   },
   {
-    title: "Nitroxes AI",
+    title: "oneRepo",
     description:
       "A Gemini-based Web Application Chatbot including Auth0, MongoDB, with minimal design",
     imageSrc:
-      "https://github.com/EnderTonol/Nitroxes.ai/raw/main/snapshots/home.png",
-    alt: "Screenshot of Nitroxes AI", // Assumed URL; replace with actual
-    githubIssueUrl: "https://github.com/EnderTonol/Nitroxes.ai/issues",
-    githubRepoUrl: "https://github.com/EnderTonol/Nitroxes.ai",
-    year: "2024",
+      "/media/one-repo.png",
+    alt: "Screenshot of oneRepo", 
+    githubIssueUrl: "https://github.com/quddus-larik/oneRepo/issues",
+    githubRepoUrl: "https://github.com/quddus-larik/oneRepo",
+    year: "2025",
     chipLabel: "#02"
   },
 ];
@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
   const isSmallScreen = width <= 375;
   return (
     <div className="mt-5">
-      <Heads title="PROJECTS" />
+      <Heads title="INITIATIVES" />
       <div className="grid gap-12 px-8 my-4 lg:px-24 lg:grid-cols-2">
         {projects.map((project, index) => (
           <div key={`PC${index+1}`} className="w-full h-auto rounded-xl">
